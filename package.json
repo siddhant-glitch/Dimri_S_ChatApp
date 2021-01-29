@@ -1,0 +1,17 @@
+{
+  "name": "dimchatapp",
+  "version": "1.0.0",
+  "description": "a fun node build",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon app & browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'",
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "dimdim",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "express": "^4.17.1"
+  }
+}
