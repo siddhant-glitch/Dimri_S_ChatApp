@@ -21,5 +21,22 @@ const server = app.listen(port, () => {
     console.log(`app is running on ${port}`);
 });
 
-
+//messenger is the connection manager - like a switchboard operator
 messenger.attach(server);
+
+
+//socket is the individual connection = the caller
+messenger.on('connection', (socket) => {
+    console.log(`a user connected: ${socket.id}`);
+
+    //socket is the individual connection - the caller
+    socket.emit('connected', { sID: `${socket.id}`, message: 'new connection'});
+
+    socket.on('chatmessage', function(msg) {
+        messenger.emit('message', { id: socket.id, message: msg });
+    });
+
+    socket.on('disconnect', () => {
+        console.log('a user has disconnected');
+    })
+});

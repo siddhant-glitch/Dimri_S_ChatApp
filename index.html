@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <title>chat app</title>
 </head>
 <body>
-    <main>
-        <h1 class="hidden">Super easy chat tasticness</h1>
-        <h4>Add a username to join the chat</h4>
-        <h6>or not. to stealth post</h6>
+   
+    <div class="container">
+        <video id="video" loop muted autoplay preload="auto">
+            <source src="images/background.mp4" type="video/mp4" />
+        </video>
+    </div>
 
-        <input type="text" placeholder="your handle">
-        <input type="password" placeholder="password">
+    <img src="images/logo.png" alt="logo" width="300px" class="logo">
+    <main>
+        
+        
+        <h4>Add a username to join the chat</h4>
+        <h6>or not. to stealth post</h6></br>
+
+        <input class="usernameInput" type="text" placeholder="your handle" maxlength="14">
 
         <input type="submit" placeholder="JOIN">
 
